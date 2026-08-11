@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -666,8 +667,7 @@ body {
 }
 
 
-.modal.active
-.modal-box {
+.modal.active .modal-box {
 
     transform:
         scale(1)
@@ -858,6 +858,16 @@ body {
 
     transform:
         translateY(-2px);
+}
+
+
+.music-button:disabled {
+
+    opacity: .5;
+
+    cursor: not-allowed;
+
+    transform: none;
 }
 
 
@@ -1771,43 +1781,44 @@ tem um pedacinho meu aí com você.
 
 /* =====================================================
    CAMINHOS DAS MÚSICAS
-
-   IMPORTANTE:
-   Como o index.html está junto dos MP3,
-   usamos apenas o nome do arquivo.
 ===================================================== */
+
+/*
+   IMPORTANTE:
+
+   Os arquivos MP3 devem estar na MESMA pasta
+   deste index.html.
+
+   Exemplo:
+
+   index.html
+   queen.mp3
+   bestpart.mp3
+   pov.mp3
+   etc.
+*/
 
 const musicas = {
 
-    queen:
-        "queen.mp3",
+    queen: "./queen.mp3",
 
-    bestpart:
-        "bestpart.mp3",
+    bestpart: "./bestpart.mp3",
 
-    pov:
-        "pov.mp3",
+    pov: "./pov.mp3",
 
-    wecantbefriends:
-        "wecantbefriends.mp3",
+    wecantbefriends: "./wecantbefriends.mp3",
 
-    springday:
-        "springday.mp3",
+    springday: "./springday.mp3",
 
-    loveyourself:
-        "loveyourself.mp3",
+    loveyourself: "./loveyourself.mp3",
 
-    magicshop:
-        "magicshop.mp3",
+    magicshop: "./magicshop.mp3",
 
-    dynamite:
-        "dynamite.mp3",
+    dynamite: "./dynamite.mp3",
 
-    moonlight:
-        "moonlight.mp3"
+    moonlight: "./moonlight.mp3"
 
 };
-
 
 
 /* =====================================================
@@ -1816,123 +1827,98 @@ const musicas = {
 
 const letters = {
 
+    saudade: {
 
-/* -----------------------------------------------------
-   SAUDADE
------------------------------------------------------ */
+        icon: "💌",
 
-saudade: {
+        title:
+            "quando estiver com saudades",
 
-    icon: "💌",
-
-    title:
-        "quando estiver com saudades",
-
-    message:
+        message:
 `Eu queria poder simplesmente aparecer aí agora. Bater na sua porta, te abraçar forte e ficar alguns minutos te enchendo de beijos e te chamando de jambinho, bubu, milenete, fro, mo, momo, labubu.
 
 Não da para fazer isso, então espero que essa mensagem seja um pedacinho meu chegando em você.
 
 Quando a saudade bater, lembra que daqui do umbral tem alguém pensando em você e contando os dias para o nosso reencontro.`,
 
-    music:
-        "Queen & Poet — John Michael Howell",
+        music:
+            "Queen & Poet — John Michael Howell",
 
-    audio:
-        musicas.queen
+        audio:
+            musicas.queen
 
-},
+    },
 
 
+    sozinha: {
 
-/* -----------------------------------------------------
-   SOZINHA
------------------------------------------------------ */
+        icon: "🫂",
 
-sozinha: {
+        title:
+            "quando estiver se sentindo sozinha",
 
-    icon: "🫂",
-
-    title:
-        "quando estiver se sentindo sozinha",
-
-    message:
+        message:
 `Eu sei que tem dias que ai parece um castelo enorme e solitario, e que voce parece perdida no meio dessa capital desgraçada. Mas você não está sozinha de verdade. Tem um ser humaninho aqui que se importa muito com você, que quer saber como foi seu dia, que fica feliz quando você está feliz, que queria estar aí para te fazer companhia e diminuir um pouco o peso de tudo. Se eu pudesse, deitaria com você e encheria seu ouvido de doçuras, minha formiguinha. Então, enquanto eu não posso estar ai, fica o lembrete: eu sempre vou ter você para voltar ❤️`,
 
-    music:
-        "Best Part — Daniel Caesar & H.E.R.",
+        music:
+            "Best Part — Daniel Caesar & H.E.R.",
 
-    audio:
-        musicas.bestpart
+        audio:
+            musicas.bestpart
 
-},
+    },
 
 
+    triste: {
 
-/* -----------------------------------------------------
-   TRISTE
------------------------------------------------------ */
+        icon: "🌧️",
 
-triste: {
+        title:
+            "quando estiver triste",
 
-    icon: "🌧️",
-
-    title:
-        "quando estiver triste",
-
-    message:
+        message:
 `Oi meu amor. Talvez quando você abrir isso eu não saiba exatamente o que está acontecendo, mas sei que você não precisa ser forte o tempo todo. Pode chorar, pode desabafar comigo, pode me ligar e ficar quietinha se quiser. Lembre que não precisamos resolver nossa vida toda em um dia. As vezes. tudo que podemos fazer é respirar, tomar uma agua, tomar um banho e esperar o coração ficar um pouquinho mais leve. Se nada disso funcionar, fecha isso aqui e imagina eu te dando um abraço muito demorado que você não conseguiria escapar.`,
 
-    music:
-        "pov — Ariana Grande",
+        music:
+            "pov — Ariana Grande",
 
-    audio:
-        musicas.pov
+        audio:
+            musicas.pov
 
-},
+    },
 
 
+    desistir: {
 
-/* -----------------------------------------------------
-   DESISTIR
------------------------------------------------------ */
+        icon: "🌱",
 
-desistir: {
+        title:
+            "quando quiser desistir",
 
-    icon: "🌱",
-
-    title:
-        "quando quiser desistir",
-
-    message:
+        message:
 `Eu sei que você está longe de casa por um motivo. Sei que estudar aí é muito dificil e que existem dias que você pensa “por que eu fui inventar isso?”. Mas olhe onde meu jambinho já chegou. Minha Milenete, você teve coragem de sair das asas dos seus pais para construir o seu futuro, isso é GIGANTEEEE.
 
 Não esqueça nunca de ter orgulha de si mesma. Eu tenho e sempre vou ter.
 
 Vá no seu ritmo, saiba que seu lu tá aqui pra sempre te lembrar de nunca desistir.`,
 
-    music:
-        "Magic Shop — BTS",
+        music:
+            "Magic Shop — BTS",
 
-    audio:
-        musicas.magicshop
+        audio:
+            musicas.magicshop
 
-},
+    },
 
 
+    dormir: {
 
-/* -----------------------------------------------------
-   MIMIR
------------------------------------------------------ */
+        icon: "🌙",
 
-dormir: {
+        title:
+            "abra antes de mimir",
 
-    icon: "🌙",
-
-    title:
-        "abra antes de mimir",
-
-    message:
+        message:
 `Provavelmente você está ai deitada, mexendo no celular, enquanto eu estou aqui longe e ocupado. Queria poder dar boa noite olhando no fundo dos seus olhos, te abraçar e ouvir você falando sobre o seu dia.
 
 Mas, vou deixar isso aqui.
@@ -1941,28 +1927,23 @@ Dorme bem Jambinho, bjos, te amo e até mais tarde.
 
 Mesmo que a gente esteja em lugares diferentes, quando você olhar novamente para o seu celular, eu vou estar olhando para você por ele.`,
 
-    music:
-        "Moonlight — Ariana Grande",
+        music:
+            "Moonlight — Ariana Grande",
 
-    audio:
-        musicas.moonlight
+        audio:
+            musicas.moonlight
 
-},
+    },
 
 
+    conquista: {
 
-/* -----------------------------------------------------
-   CONQUISTA
------------------------------------------------------ */
+        icon: "🏆",
 
-conquista: {
+        title:
+            "abra quando tiver uma conquista",
 
-    icon: "🏆",
-
-    title:
-        "abra quando tiver uma conquista",
-
-    message:
+        message:
 `EU SABIA QUE VOCÊ IA CONSEGUIR MILENEEEEEEETEEEEE.
 
 Eu espero muito que você esteja orgulhosa de si mesma, porque eu estou aqui vibrando e gritando por algo que nem é comigo meu amor.
@@ -1971,84 +1952,69 @@ Suas conquistas me deixam muito feliz bubu.
 
 Comemora muito, você merece, e quando for falar comigo me conta a historia inteira pra gente vibrar juntos.`,
 
-    music:
-        "Dynamite — BTS",
+        music:
+            "Dynamite — BTS",
 
-    audio:
-        musicas.dynamite
+        audio:
+            musicas.dynamite
 
-},
+    },
 
 
+    casa: {
 
-/* -----------------------------------------------------
-   CASA
------------------------------------------------------ */
+        icon: "🏠",
 
-casa: {
+        title:
+            "quando estiver com saudades de casa",
 
-    icon: "🏠",
-
-    title:
-        "quando estiver com saudades de casa",
-
-    message:
+        message:
 `Eu sei que não sou sua casa, sei que estar sem seus pais doi muito e nada ai consegue ocupar o espaço deles.
 
 Espero que você saiba que construiu em mim um lar onde você é muito amada.
 
 E nesse lar tem um lu esperando a mih dele, pronto pra te abraçar e ouvir todas as historias que ela tem pra contar, prontinho para matar a saudade.`,
 
-    music:
-        "Spring Day — BTS",
+        music:
+            "Spring Day — BTS",
 
-    audio:
-        musicas.springday
+        audio:
+            musicas.springday
 
-},
+    },
 
 
+    raiva: {
 
-/* -----------------------------------------------------
-   RAIVA
------------------------------------------------------ */
+        icon: "😤",
 
-raiva: {
+        title:
+            "quando estiver com raiva (mesmo que seja de mim)",
 
-    icon: "😤",
-
-    title:
-        "quando estiver com raiva (mesmo que seja de mim)",
-
-    message:
+        message:
 `Antes de qualquer coisa respira fundo Jambinho, não faça besteira, não xingue ninguem, vai beber água e tomar um banho, me manda mensagem e vamos conversar.
 
 Fique calminha para não cometer nenhum crime KKKKKKKKKKK.
 
 Tô aqui pra escutar tudo bubu ❤️`,
 
-    music:
-        "we can't be friends — Ariana Grande",
+        music:
+            "we can't be friends — Ariana Grande",
 
-    audio:
-        musicas.wecantbefriends
+        audio:
+            musicas.wecantbefriends
 
-},
+    },
 
 
+    abraco: {
 
-/* -----------------------------------------------------
-   ABRAÇO
------------------------------------------------------ */
+        icon: "🤗",
 
-abraco: {
+        title:
+            "abra quando precisar de um abraço",
 
-    icon: "🤗",
-
-    title:
-        "abra quando precisar de um abraço",
-
-    message:
+        message:
 `não tem muito o que escrever né, infelizmente.
 
 Então, imagine:
@@ -2059,28 +2025,23 @@ Eu abraço você muito forte sem pressa nenhuma.
 
 Pronto, considere-se abraça Jambinho. ❤️`,
 
-    music:
-        "Serendipity — BTS",
+        music:
+            "Love Yourself — Justin Bieber",
 
-    audio:
-        musicas.loveyourself
+        audio:
+            musicas.loveyourself
 
-},
+    },
 
 
+    pensando: {
 
-/* -----------------------------------------------------
-   PENSANDO DEMAIS
------------------------------------------------------ */
+        icon: "💭",
 
-pensando: {
+        title:
+            "quando estiver pensando demais",
 
-    icon: "💭",
-
-    title:
-        "quando estiver pensando demais",
-
-    message:
+        message:
 `Ei, minha formiguinha.
 
 Para de pensar tanto.
@@ -2107,28 +2068,23 @@ E tem alguém que te ama muito pensando em você enquanto você lê isso.
 
 Não precisa resolver o amanhã hoje.`,
 
-    music:
-        "pov — Ariana Grande",
+        music:
+            "pov — Ariana Grande",
 
-    audio:
-        musicas.pov
+        audio:
+            musicas.pov
 
-},
+    },
 
 
+    saudadeLu: {
 
-/* -----------------------------------------------------
-   SAUDADE DO LU
------------------------------------------------------ */
+        icon: "🥺",
 
-saudadeLu: {
+        title:
+            "quando estiver com saudades do Lu",
 
-    icon: "🥺",
-
-    title:
-        "quando estiver com saudades do Lu",
-
-    message:
+        message:
 `KKKKKKKKKKKKKKKKKK.
 
 Eu sei.
@@ -2153,28 +2109,23 @@ eu também queria você aqui.
 
 Muito. ❤️`,
 
-    music:
-        "Best Part — Daniel Caesar & H.E.R.",
+        music:
+            "Best Part — Daniel Caesar & H.E.R.",
 
-    audio:
-        musicas.bestpart
+        audio:
+            musicas.bestpart
 
-},
+    },
 
 
+    amor: {
 
-/* -----------------------------------------------------
-   AMOR
------------------------------------------------------ */
+        icon: "❤️",
 
-amor: {
+        title:
+            "quando precisar lembrar que eu te amo",
 
-    icon: "❤️",
-
-    title:
-        "quando precisar lembrar que eu te amo",
-
-    message:
+        message:
 `Sim.
 
 Eu te amo.
@@ -2193,28 +2144,23 @@ eu te amo, Jambinho.
 
 Muito. ❤️`,
 
-    music:
-        "pov — Ariana Grande",
+        music:
+            "pov — Ariana Grande",
 
-    audio:
-        musicas.pov
+        audio:
+            musicas.pov
 
-},
+    },
 
 
+    distancia: {
 
-/* -----------------------------------------------------
-   DISTÂNCIA
------------------------------------------------------ */
+        icon: "🌎",
 
-distancia: {
+        title:
+            "quando a distância parecer grande demais",
 
-    icon: "🌎",
-
-    title:
-        "quando a distância parecer grande demais",
-
-    message:
+        message:
 `Eu sei.
 
 Hoje o Ceará está longe de SSA.
@@ -2241,28 +2187,23 @@ não é para sempre.
 
 É só até a próxima vez que eu puder te abraçar.`,
 
-    music:
-        "Spring Day — BTS",
+        music:
+            "Spring Day — BTS",
 
-    audio:
-        musicas.springday
+        audio:
+            musicas.springday
 
-},
+    },
 
 
+    feliz: {
 
-/* -----------------------------------------------------
-   FELIZ
------------------------------------------------------ */
+        icon: "🥰",
 
-feliz: {
+        title:
+            "quando estiver feliz",
 
-    icon: "🥰",
-
-    title:
-        "quando estiver feliz",
-
-    message:
+        message:
 `Se você abriu isso estando feliz, eu já estou feliz também.
 
 Eu não quero estar aqui só nos seus dias ruins.
@@ -2289,28 +2230,23 @@ E depois me conta tudo.
 
 Eu quero conhecer todas as versões da minha Milenete. ❤️`,
 
-    music:
-        "Dynamite — BTS",
+        music:
+            "Dynamite — BTS",
 
-    audio:
-        musicas.dynamite
+        audio:
+            musicas.dynamite
 
-},
+    },
 
 
+    nos: {
 
-/* -----------------------------------------------------
-   NÓS
------------------------------------------------------ */
+        icon: "🫶",
 
-nos: {
+        title:
+            "quando precisar lembrar de nós",
 
-    icon: "🫶",
-
-    title:
-        "quando precisar lembrar de nós",
-
-    message:
+        message:
 `Talvez um dia você esteja aí e pense em tudo que aconteceu para a gente chegar até aqui.
 
 Todas as conversas.
@@ -2353,28 +2289,23 @@ Mais nós.
 
 Ainda tem muita coisa para a gente viver.`,
 
-    music:
-        "Best Part — Daniel Caesar & H.E.R.",
+        music:
+            "Best Part — Daniel Caesar & H.E.R.",
 
-    audio:
-        musicas.bestpart
+        audio:
+            musicas.bestpart
 
-},
+    },
 
 
+    mim: {
 
-/* -----------------------------------------------------
-   PRECISAR DE MIM
------------------------------------------------------ */
+        icon: "💗",
 
-mim: {
+        title:
+            "quando precisar de mim",
 
-    icon: "💗",
-
-    title:
-        "quando precisar de mim",
-
-    message:
+        message:
 `Pode me chamar.
 
 Sério.
@@ -2413,16 +2344,15 @@ Eu tô aqui.
 
 ❤️`,
 
-    music:
-        "pov — Ariana Grande",
+        music:
+            "pov — Ariana Grande",
 
-    audio:
-        musicas.pov
+        audio:
+            musicas.pov
 
-}
+    }
 
 };
-
 
 
 /* =====================================================
@@ -2439,23 +2369,26 @@ const musicButton =
     document.getElementById("musicButton");
 
 
-
 /* =====================================================
    ABRIR CARTA
 ===================================================== */
 
 function openLetter(id) {
 
-    const letter =
-        letters[id];
-
+    const letter = letters[id];
 
     if (!letter) {
+
+        console.error(
+            "Carta não encontrada:",
+            id
+        );
+
         return;
     }
 
 
-    /* conteúdo */
+    /* Conteúdo */
 
     document
         .getElementById("modalIcon")
@@ -2481,26 +2414,50 @@ function openLetter(id) {
         letter.music;
 
 
-    /* para música anterior */
+    /* =================================================
+       PARA A MÚSICA ANTERIOR
+    ================================================= */
 
     audioPlayer.pause();
 
     audioPlayer.currentTime = 0;
 
-
-    /* nova música */
-
-    audioPlayer.src =
-        letter.audio;
+    audioPlayer.removeAttribute("src");
 
     audioPlayer.load();
 
 
-    musicButton.textContent =
-        "▶️ Tocar música";
+    /* =================================================
+       CARREGA A NOVA MÚSICA
+    ================================================= */
+
+    if (letter.audio) {
+
+        audioPlayer.src =
+            letter.audio;
+
+        audioPlayer.load();
+
+        musicButton.disabled =
+            false;
+
+        musicButton.textContent =
+            "▶️ Tocar música";
+
+    }
+
+    else {
+
+        musicButton.disabled =
+            true;
+
+        musicButton.textContent =
+            "🎵 Música indisponível";
+
+    }
 
 
-    /* abre modal */
+    /* Abre modal */
 
     modal.classList.add(
         "active"
@@ -2516,32 +2473,46 @@ function openLetter(id) {
 }
 
 
-
 /* =====================================================
-   TOCAR MÚSICA
+   TOCAR / PAUSAR
 ===================================================== */
 
-function toggleMusic() {
+async function toggleMusic() {
 
-    if (
-        audioPlayer.paused
-    ) {
+    if (!audioPlayer.src) {
 
-        audioPlayer
-            .play()
-            .then(() => {
+        alert(
+            "Essa carta não possui uma música configurada. ❤️"
+        );
 
-                musicButton.textContent =
-                    "⏸️ Pausar música";
+        return;
+    }
 
-            })
-            .catch(() => {
 
-                alert(
-                    "Toque novamente no botão para iniciar a música ❤️"
-                );
+    if (audioPlayer.paused) {
 
-            });
+        try {
+
+            await audioPlayer.play();
+
+            musicButton.textContent =
+                "⏸️ Pausar música";
+
+        }
+
+        catch (error) {
+
+            console.error(
+                "Erro ao tocar música:",
+                error
+            );
+
+            alert(
+                "Não consegui tocar essa música. " +
+                "Confira se o arquivo .mp3 existe no GitHub. ❤️"
+            );
+
+        }
 
     }
 
@@ -2555,7 +2526,6 @@ function toggleMusic() {
     }
 
 }
-
 
 
 /* =====================================================
@@ -2578,8 +2548,7 @@ audioPlayer.addEventListener(
     function() {
 
         if (
-            audioPlayer.currentTime <
-            audioPlayer.duration
+            !audioPlayer.ended
         ) {
 
             musicButton.textContent =
@@ -2602,6 +2571,25 @@ audioPlayer.addEventListener(
 );
 
 
+/* =====================================================
+   ERRO AO CARREGAR MÚSICA
+===================================================== */
+
+audioPlayer.addEventListener(
+    "error",
+    function() {
+
+        console.error(
+            "Não foi possível carregar a música:",
+            audioPlayer.src
+        );
+
+        musicButton.textContent =
+            "❌ Música não encontrada";
+
+    }
+);
+
 
 /* =====================================================
    FECHAR CARTA
@@ -2613,15 +2601,26 @@ function closeLetter() {
 
     audioPlayer.currentTime = 0;
 
+    audioPlayer.removeAttribute(
+        "src"
+    );
+
+    audioPlayer.load();
+
+
     modal.classList.remove(
         "active"
     );
 
+
     document.body.style.overflow =
         "";
 
-}
 
+    musicButton.textContent =
+        "▶️ Tocar música";
+
+}
 
 
 /* =====================================================
@@ -2644,7 +2643,6 @@ modal.addEventListener(
 );
 
 
-
 /* =====================================================
    ESC
 ===================================================== */
@@ -2663,7 +2661,6 @@ document.addEventListener(
 
     }
 );
-
 
 
 /* =====================================================
@@ -2748,3 +2745,4 @@ function createHearts() {
 </body>
 
 </html>
+```
