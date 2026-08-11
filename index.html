@@ -1,27 +1,14 @@
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Para minha Mih ❤️</title>
 
 <style>
 
-/* =====================================================
-   FONTES
-===================================================== */
-
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Serif+Display&family=Poppins:wght@300;400;500;600&display=swap');
-
-
-/* =====================================================
-   RESET
-===================================================== */
 
 * {
     margin: 0;
@@ -29,225 +16,87 @@
     box-sizing: border-box;
 }
 
-
-/* =====================================================
-   BODY
-===================================================== */
-
 html {
     scroll-behavior: smooth;
 }
 
 body {
-
     min-height: 100vh;
-
     color: white;
-
     font-family: 'Poppins', sans-serif;
 
     background:
-        radial-gradient(
-            circle at 15% 20%,
-            rgba(255, 100, 170, .12),
-            transparent 25%
-        ),
-
-        radial-gradient(
-            circle at 85% 70%,
-            rgba(130, 100, 255, .13),
-            transparent 28%
-        ),
-
-        linear-gradient(
-            180deg,
-            #080714 0%,
-            #100a20 50%,
-            #180b1e 100%
-        );
+        radial-gradient(circle at 15% 20%, rgba(255,100,170,.12), transparent 25%),
+        radial-gradient(circle at 85% 70%, rgba(130,100,255,.13), transparent 28%),
+        linear-gradient(180deg, #080714 0%, #100a20 50%, #180b1e 100%);
 
     overflow-x: hidden;
 }
 
-
-/* =====================================================
+/* =========================
    ESTRELAS
-===================================================== */
+========================= */
 
 .stars,
 .stars2,
 .stars3 {
-
     position: fixed;
-
     inset: 0;
-
     pointer-events: none;
-
     z-index: 0;
 }
 
-
 .stars {
-
     background-image:
-
-        radial-gradient(
-            2px 2px at 10% 20%,
-            white,
-            transparent
-        ),
-
-        radial-gradient(
-            1px 1px at 20% 80%,
-            white,
-            transparent
-        ),
-
-        radial-gradient(
-            2px 2px at 35% 30%,
-            white,
-            transparent
-        ),
-
-        radial-gradient(
-            1px 1px at 48% 70%,
-            white,
-            transparent
-        ),
-
-        radial-gradient(
-            2px 2px at 65% 15%,
-            white,
-            transparent
-        ),
-
-        radial-gradient(
-            1px 1px at 78% 45%,
-            white,
-            transparent
-        ),
-
-        radial-gradient(
-            2px 2px at 90% 80%,
-            white,
-            transparent
-        ),
-
-        radial-gradient(
-            1px 1px at 55% 90%,
-            white,
-            transparent
-        );
+        radial-gradient(2px 2px at 10% 20%, white, transparent),
+        radial-gradient(1px 1px at 20% 80%, white, transparent),
+        radial-gradient(2px 2px at 35% 30%, white, transparent),
+        radial-gradient(1px 1px at 48% 70%, white, transparent),
+        radial-gradient(2px 2px at 65% 15%, white, transparent),
+        radial-gradient(1px 1px at 78% 45%, white, transparent),
+        radial-gradient(2px 2px at 90% 80%, white, transparent),
+        radial-gradient(1px 1px at 55% 90%, white, transparent);
 
     animation: twinkle 5s infinite alternate;
 }
 
-
 .stars2 {
-
     background-image:
-
-        radial-gradient(
-            1px 1px at 15% 60%,
-            #ffd6e7,
-            transparent
-        ),
-
-        radial-gradient(
-            2px 2px at 30% 10%,
-            white,
-            transparent
-        ),
-
-        radial-gradient(
-            1px 1px at 50% 40%,
-            #ffd6e7,
-            transparent
-        ),
-
-        radial-gradient(
-            2px 2px at 70% 85%,
-            white,
-            transparent
-        ),
-
-        radial-gradient(
-            1px 1px at 85% 25%,
-            #ffd6e7,
-            transparent
-        );
+        radial-gradient(1px 1px at 15% 60%, #ffd6e7, transparent),
+        radial-gradient(2px 2px at 30% 10%, white, transparent),
+        radial-gradient(1px 1px at 50% 40%, #ffd6e7, transparent),
+        radial-gradient(2px 2px at 70% 85%, white, transparent),
+        radial-gradient(1px 1px at 85% 25%, #ffd6e7, transparent);
 
     animation: twinkle 7s infinite alternate-reverse;
 }
 
-
 .stars3 {
-
     background-image:
-
-        radial-gradient(
-            1px 1px at 5% 90%,
-            white,
-            transparent
-        ),
-
-        radial-gradient(
-            1px 1px at 25% 45%,
-            white,
-            transparent
-        ),
-
-        radial-gradient(
-            1px 1px at 45% 15%,
-            white,
-            transparent
-        ),
-
-        radial-gradient(
-            1px 1px at 75% 60%,
-            white,
-            transparent
-        ),
-
-        radial-gradient(
-            1px 1px at 95% 35%,
-            white,
-            transparent
-        );
+        radial-gradient(1px 1px at 5% 90%, white, transparent),
+        radial-gradient(1px 1px at 25% 45%, white, transparent),
+        radial-gradient(1px 1px at 45% 15%, white, transparent),
+        radial-gradient(1px 1px at 75% 60%, white, transparent),
+        radial-gradient(1px 1px at 95% 35%, white, transparent);
 
     animation: twinkle 9s infinite alternate;
 }
 
-
 @keyframes twinkle {
-
-    from {
-        opacity: .3;
-    }
-
-    to {
-        opacity: .9;
-    }
-
+    from { opacity: .3; }
+    to { opacity: .9; }
 }
 
-
-/* =====================================================
+/* =========================
    LUA
-===================================================== */
+========================= */
 
 .moon {
-
     position: fixed;
-
     width: 110px;
     height: 110px;
-
     border-radius: 50%;
-
     top: 55px;
-
     right: 8%;
 
     background: #fff5d9;
@@ -259,251 +108,141 @@ body {
     z-index: 1;
 }
 
-
 .moon::after {
-
     content: "";
-
     position: absolute;
-
     width: 100px;
     height: 100px;
-
     border-radius: 50%;
-
     background: #0b0817;
-
     top: -12px;
-
     left: 25px;
 }
 
-
-/* =====================================================
+/* =========================
    CONTAINER
-===================================================== */
+========================= */
 
 .container {
-
     position: relative;
-
     z-index: 2;
-
     width: min(1100px, 92%);
-
     margin: auto;
 }
 
-
-/* =====================================================
+/* =========================
    HERO
-===================================================== */
+========================= */
 
 .hero {
-
     min-height: 100vh;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     text-align: center;
-
     padding: 80px 0;
 }
 
-
 .hero-content {
-
     max-width: 800px;
 }
 
-
 .small-title {
-
     color: #ffb6d9;
-
     font-size: 14px;
-
     letter-spacing: 4px;
-
     text-transform: uppercase;
-
     margin-bottom: 20px;
 }
 
-
 .hero h1 {
-
     font-family: 'DM Serif Display', serif;
-
-    font-size: clamp(
-        3.3rem,
-        10vw,
-        7rem
-    );
-
+    font-size: clamp(3.3rem, 10vw, 7rem);
     line-height: .95;
-
     font-weight: 400;
-
     margin-bottom: 30px;
 
     background:
-        linear-gradient(
-            135deg,
-            #fff,
-            #ffc5df,
-            #e7c7ff
-        );
+        linear-gradient(135deg, #fff, #ffc5df, #e7c7ff);
 
     -webkit-background-clip: text;
-
     background-clip: text;
-
     color: transparent;
 }
 
-
 .hero p {
-
     font-family: 'Caveat', cursive;
-
-    font-size: clamp(
-        1.6rem,
-        4vw,
-        2.3rem
-    );
-
+    font-size: clamp(1.6rem, 4vw, 2.3rem);
     line-height: 1.3;
-
     color: #eadce8;
-
     max-width: 680px;
-
     margin: auto;
 }
 
-
 .scroll {
-
     margin-top: 60px;
-
     color: #cda9c5;
-
     font-size: 13px;
-
     letter-spacing: 2px;
-
-    animation:
-        float 2s infinite ease-in-out;
+    animation: float 2s infinite ease-in-out;
 }
 
-
 @keyframes float {
-
     50% {
         transform: translateY(8px);
     }
-
 }
 
-
-/* =====================================================
-   SEÇÃO DAS CARTAS
-===================================================== */
+/* =========================
+   CARTAS
+========================= */
 
 .letters-section {
-
-    padding:
-        60px
-        0
-        120px;
+    padding: 60px 0 120px;
 }
 
-
 .section-title {
-
     text-align: center;
-
     margin-bottom: 50px;
 }
 
-
 .section-title h2 {
-
     font-family: 'DM Serif Display', serif;
-
     font-size: 3rem;
-
     font-weight: 400;
 }
 
-
 .section-title p {
-
     color: #cbb6c9;
-
     margin-top: 10px;
 }
 
-
-/* =====================================================
-   GRID
-===================================================== */
-
 .letters {
-
     display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
 
-
-/* =====================================================
-   CARTA
-===================================================== */
-
 .letter {
-
     position: relative;
-
     min-height: 230px;
-
     padding: 28px;
 
-    border:
-        1px solid
-        rgba(255,255,255,.1);
-
+    border: 1px solid rgba(255,255,255,.1);
     border-radius: 24px;
 
-    background:
-        rgba(255,255,255,.045);
+    background: rgba(255,255,255,.045);
 
-    backdrop-filter:
-        blur(15px);
+    backdrop-filter: blur(15px);
 
     cursor: pointer;
-
-    transition:
-        .35s ease;
-
+    transition: .35s ease;
     overflow: hidden;
 }
 
-
 .letter::before {
-
     content: "";
-
     position: absolute;
-
     inset: 0;
 
     background:
@@ -516,90 +255,56 @@ body {
     pointer-events: none;
 }
 
-
 .letter:hover {
+    transform: translateY(-8px) scale(1.015);
 
-    transform:
-        translateY(-8px)
-        scale(1.015);
-
-    border-color:
-        rgba(255,174,210,.35);
+    border-color: rgba(255,174,210,.35);
 
     box-shadow:
-        0 20px 60px
-        rgba(0,0,0,.3);
+        0 20px 60px rgba(0,0,0,.3);
 }
 
-
 .envelope {
-
     font-size: 42px;
-
     margin-bottom: 20px;
 }
 
-
 .letter h3 {
-
-    font-family:
-        'Caveat',
-        cursive;
-
+    font-family: 'Caveat', cursive;
     font-size: 29px;
-
     font-weight: 600;
-
     color: #ffd3e6;
-
     margin-bottom: 10px;
 }
 
-
 .letter p {
-
     color: #cdbecb;
-
     font-size: 13px;
-
     line-height: 1.6;
 }
 
-
 .click {
-
     position: absolute;
-
     bottom: 20px;
-
     right: 24px;
-
     font-size: 11px;
-
     color: #9d859b;
 }
 
-
-/* =====================================================
+/* =========================
    MODAL
-===================================================== */
+========================= */
 
 .modal {
-
     position: fixed;
-
     inset: 0;
 
-    background:
-        rgba(4,2,10,.82);
+    background: rgba(4,2,10,.82);
 
-    backdrop-filter:
-        blur(15px);
+    backdrop-filter: blur(15px);
 
     display: flex;
-
     justify-content: center;
-
     align-items: center;
 
     padding: 20px;
@@ -607,28 +312,19 @@ body {
     z-index: 100;
 
     opacity: 0;
-
     visibility: hidden;
 
     transition: .35s;
 }
 
-
 .modal.active {
-
     opacity: 1;
-
     visibility: visible;
 }
 
-
 .modal-box {
-
-    width:
-        min(720px, 100%);
-
+    width: min(720px, 100%);
     max-height: 90vh;
-
     overflow-y: auto;
 
     padding: 45px;
@@ -642,247 +338,148 @@ body {
             rgba(17,13,31,.98)
         );
 
-    border:
-        1px solid
-        rgba(255,180,215,.2);
+    border: 1px solid rgba(255,180,215,.2);
 
     box-shadow:
-        0 30px 100px
-        rgba(0,0,0,.5);
+        0 30px 100px rgba(0,0,0,.5);
 
-    transform:
-        scale(.88)
-        translateY(30px);
+    transform: scale(.88) translateY(30px);
 
     transition:
-        .4s
-        cubic-bezier(
-            .2,
-            .8,
-            .2,
-            1
-        );
+        .4s cubic-bezier(.2,.8,.2,1);
 
     position: relative;
 }
 
-
 .modal.active .modal-box {
-
-    transform:
-        scale(1)
-        translateY(0);
+    transform: scale(1) translateY(0);
 }
 
-
-/* =====================================================
-   BOTÃO FECHAR
-===================================================== */
+/* =========================
+   FECHAR
+========================= */
 
 .close {
-
     position: absolute;
-
     top: 18px;
-
     right: 22px;
 
     width: 38px;
-
     height: 38px;
 
     border: 0;
-
     border-radius: 50%;
 
-    background:
-        rgba(255,255,255,.07);
+    background: rgba(255,255,255,.07);
 
     color: white;
-
     font-size: 22px;
 
     cursor: pointer;
-
     transition: .2s;
 }
 
-
 .close:hover {
-
-    background:
-        rgba(255,120,170,.2);
+    background: rgba(255,120,170,.2);
 }
 
-
-/* =====================================================
-   CONTEÚDO DA CARTA
-===================================================== */
+/* =========================
+   CONTEUDO
+========================= */
 
 .modal-icon {
-
     font-size: 45px;
-
     margin-bottom: 15px;
 }
 
-
 .modal-title {
-
-    font-family:
-        'Caveat',
-        cursive;
-
+    font-family: 'Caveat', cursive;
     font-size: 42px;
-
     color: #ffd1e5;
-
     margin-bottom: 25px;
 }
 
-
 .message {
-
-    font-family:
-        'Caveat',
-        cursive;
-
+    font-family: 'Caveat', cursive;
     font-size: 24px;
-
     line-height: 1.55;
-
     color: #f3e8f0;
-
     white-space: pre-line;
 }
 
-
-/* =====================================================
-   MÚSICA
-===================================================== */
+/* =========================
+   MUSICA
+========================= */
 
 .music {
-
     margin-top: 35px;
-
     padding: 20px;
 
     border-radius: 18px;
 
-    background:
-        rgba(255,255,255,.05);
+    background: rgba(255,255,255,.05);
 
-    border:
-        1px solid
-        rgba(255,255,255,.07);
+    border: 1px solid rgba(255,255,255,.07);
 }
 
-
 .music-label {
-
     color: #a995a6;
-
     font-size: 11px;
-
     text-transform: uppercase;
-
     letter-spacing: 2px;
-
     margin-bottom: 5px;
 }
 
-
 .music-name {
-
     color: #ffd0e4;
-
     font-size: 17px;
-
     margin-bottom: 15px;
 }
 
-
 #audioPlayer {
-
     width: 100%;
-
     margin-bottom: 15px;
-
     height: 40px;
-
     accent-color: #ff9fc7;
 }
 
-
 .music-button {
-
     display: inline-flex;
-
     align-items: center;
-
     justify-content: center;
-
     gap: 8px;
 
-    padding:
-        12px
-        20px;
+    padding: 12px 20px;
 
     border-radius: 30px;
 
-    border:
-        1px solid
-        rgba(255,180,210,.25);
+    border: 1px solid rgba(255,180,210,.25);
 
-    background:
-        rgba(255,120,170,.1);
+    background: rgba(255,120,170,.1);
 
     color: white;
 
-    font-family:
-        'Poppins',
-        sans-serif;
-
+    font-family: 'Poppins', sans-serif;
     font-size: 13px;
 
     cursor: pointer;
-
     transition: .25s;
 }
 
-
 .music-button:hover {
-
-    background:
-        rgba(255,120,170,.2);
-
-    transform:
-        translateY(-2px);
+    background: rgba(255,120,170,.2);
+    transform: translateY(-2px);
 }
 
-
-.music-button:disabled {
-
-    opacity: .5;
-
-    cursor: not-allowed;
-
-    transform: none;
-}
-
-
-/* =====================================================
+/* =========================
    FINAL
-===================================================== */
+========================= */
 
 .final-section {
-
     min-height: 80vh;
 
     display: flex;
-
     justify-content: center;
-
     align-items: center;
 
     text-align: center;
@@ -890,26 +487,17 @@ body {
     padding: 100px 0;
 }
 
-
 .final-box {
-
     max-width: 750px;
 }
 
-
 .final-box .heart {
-
     font-size: 70px;
-
-    animation:
-        heartbeat 1.5s infinite;
+    animation: heartbeat 1.5s infinite;
 }
 
-
 @keyframes heartbeat {
-
-    0%,
-    100% {
+    0%, 100% {
         transform: scale(1);
     }
 
@@ -920,63 +508,41 @@ body {
     30% {
         transform: scale(1);
     }
-
 }
 
-
 .final-box h2 {
-
-    font-family:
-        'DM Serif Display',
-        serif;
+    font-family: 'DM Serif Display', serif;
 
     font-size:
-        clamp(
-            2.8rem,
-            7vw,
-            5rem
-        );
+        clamp(2.8rem, 7vw, 5rem);
 
     font-weight: 400;
 
     margin: 20px 0;
 }
 
-
 .final-box p {
-
-    font-family:
-        'Caveat',
-        cursive;
-
+    font-family: 'Caveat', cursive;
     color: #e7d6e3;
-
     font-size: 26px;
-
     line-height: 1.5;
 }
 
-
 .signature {
-
     margin-top: 35px;
 
-    font-family:
-        'Caveat',
-        cursive;
+    font-family: 'Caveat', cursive;
 
     font-size: 35px;
 
     color: #ffafd0;
 }
 
-
-/* =====================================================
-   CORAÇÕES
-===================================================== */
+/* =========================
+   CORACOES
+========================= */
 
 .floating-heart {
-
     position: fixed;
 
     pointer-events: none;
@@ -984,18 +550,13 @@ body {
     z-index: 200;
 
     animation:
-        rise 1.8s
-        ease-out
-        forwards;
+        rise 1.8s ease-out forwards;
 
     font-size: 20px;
 }
 
-
 @keyframes rise {
-
     0% {
-
         transform:
             translateY(0)
             scale(.5)
@@ -1005,7 +566,6 @@ body {
     }
 
     100% {
-
         transform:
             translateY(-180px)
             scale(1.3)
@@ -1013,133 +573,87 @@ body {
 
         opacity: 0;
     }
-
 }
 
-
-/* =====================================================
+/* =========================
    RESPONSIVO
-===================================================== */
+========================= */
 
 @media (max-width: 850px) {
 
     .letters {
-
-        grid-template-columns:
-            repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
-
     .moon {
-
         width: 70px;
-
         height: 70px;
-
         right: 5%;
-
         top: 30px;
     }
 
-
     .moon::after {
-
         width: 65px;
-
         height: 65px;
-
         left: 18px;
-
         top: -8px;
     }
-
 }
-
 
 @media (max-width: 600px) {
 
     .hero {
-
         min-height: 90vh;
-
-        padding:
-            60px 0;
+        padding: 60px 0;
     }
 
-
     .hero h1 {
-
         font-size: 4rem;
     }
 
-
     .letters {
-
         grid-template-columns: 1fr;
     }
 
-
     .letter {
-
         min-height: 200px;
     }
 
-
     .modal-box {
-
-        padding:
-            32px 25px;
-
+        padding: 32px 25px;
         border-radius: 25px;
     }
 
-
     .modal-title {
-
         font-size: 36px;
     }
 
-
     .message {
-
         font-size: 22px;
     }
 
-
     .moon {
-
         opacity: .45;
     }
-
 }
 
-
 ::-webkit-scrollbar {
-
     width: 7px;
 }
 
-
 ::-webkit-scrollbar-track {
-
     background: #090712;
 }
 
-
 ::-webkit-scrollbar-thumb {
-
     background: #5f3c5c;
-
     border-radius: 10px;
 }
 
 </style>
-
 </head>
 
-
 <body>
-
 
 <div class="stars"></div>
 <div class="stars2"></div>
@@ -1147,13 +661,11 @@ body {
 
 <div class="moon"></div>
 
-
 <main>
 
-
-<!-- =====================================================
+<!-- =========================
      ABERTURA
-===================================================== -->
+========================= -->
 
 <section class="hero">
 
@@ -1163,18 +675,15 @@ body {
 do seu Lu, para minha Mih ❤️
 </div>
 
-
 <h1>
 Oi, meu amor.
 </h1>
-
 
 <p>
 Fiz esse lugar porque não posso estar aí toda vez
 que você precisar de mim.
 Então deixei alguns pedacinhos meus espalhados por aqui.
 </p>
-
 
 <div class="scroll">
 ↓ escolhe uma cartinha ↓
@@ -1185,22 +694,19 @@ Então deixei alguns pedacinhos meus espalhados por aqui.
 </section>
 
 
-
-<!-- =====================================================
+<!-- =========================
      CARTINHAS
-===================================================== -->
+========================= -->
 
 <section class="letters-section">
 
 <div class="container">
-
 
 <div class="section-title">
 
 <h2>
 Abra quando...
 </h2>
-
 
 <p>
 Escolha uma. Eu espero que ela te faça companhia. ❤️
@@ -1209,495 +715,140 @@ Escolha uma. Eu espero que ela te faça companhia. ❤️
 </div>
 
 
-
 <div class="letters">
 
-
-<!-- SAUDADE -->
-
-<div
-class="letter"
-onclick="openLetter('saudade')"
->
-
-<div class="envelope">
-💌
+<div class="letter" onclick="openLetter('saudade')">
+<div class="envelope">💌</div>
+<h3>estiver com saudades</h3>
+<p>Para quando a distância estiver apertando um pouquinho.</p>
+<span class="click">abrir →</span>
 </div>
 
-<h3>
-estiver com saudades
-</h3>
-
-<p>
-Para quando a distância estiver apertando um pouquinho.
-</p>
-
-<span class="click">
-abrir →
-</span>
-
+<div class="letter" onclick="openLetter('sozinha')">
+<div class="envelope">🫂</div>
+<h3>estiver se sentindo sozinha</h3>
+<p>Para lembrar que tem alguém pensando em você.</p>
+<span class="click">abrir →</span>
 </div>
 
-
-
-<!-- SOZINHA -->
-
-<div
-class="letter"
-onclick="openLetter('sozinha')"
->
-
-<div class="envelope">
-🫂
+<div class="letter" onclick="openLetter('triste')">
+<div class="envelope">🌧️</div>
+<h3>estiver triste</h3>
+<p>Para aqueles dias em que tudo parece pesado.</p>
+<span class="click">abrir →</span>
 </div>
 
-<h3>
-estiver se sentindo sozinha
-</h3>
-
-<p>
-Para lembrar que tem alguém pensando em você.
-</p>
-
-<span class="click">
-abrir →
-</span>
-
+<div class="letter" onclick="openLetter('desistir')">
+<div class="envelope">🌱</div>
+<h3>quiser desistir</h3>
+<p>Para lembrar do tamanho da sua coragem.</p>
+<span class="click">abrir →</span>
 </div>
 
-
-
-<!-- TRISTE -->
-
-<div
-class="letter"
-onclick="openLetter('triste')"
->
-
-<div class="envelope">
-🌧️
+<div class="letter" onclick="openLetter('dormir')">
+<div class="envelope">🌙</div>
+<h3>abra antes de mimir</h3>
+<p>Uma pequena boa noite do outro lado da distância.</p>
+<span class="click">abrir →</span>
 </div>
 
-<h3>
-estiver triste
-</h3>
-
-<p>
-Para aqueles dias em que tudo parece pesado.
-</p>
-
-<span class="click">
-abrir →
-</span>
-
+<div class="letter" onclick="openLetter('conquista')">
+<div class="envelope">🏆</div>
+<h3>tiver uma conquista</h3>
+<p>Para comemorar com você mesmo estando longe.</p>
+<span class="click">abrir →</span>
 </div>
 
-
-
-<!-- DESISTIR -->
-
-<div
-class="letter"
-onclick="openLetter('desistir')"
->
-
-<div class="envelope">
-🌱
+<div class="letter" onclick="openLetter('casa')">
+<div class="envelope">🏠</div>
+<h3>estiver com saudades de casa</h3>
+<p>Para quando a saudade dos seus pais apertar.</p>
+<span class="click">abrir →</span>
 </div>
 
-<h3>
-quiser desistir
-</h3>
-
-<p>
-Para lembrar do tamanho da sua coragem.
-</p>
-
-<span class="click">
-abrir →
-</span>
-
+<div class="letter" onclick="openLetter('raiva')">
+<div class="envelope">😤</div>
+<h3>estiver com raiva</h3>
+<p>Mesmo que a raiva seja de mim KKKKKKK.</p>
+<span class="click">abrir →</span>
 </div>
 
-
-
-<!-- MIMIR -->
-
-<div
-class="letter"
-onclick="openLetter('dormir')"
->
-
-<div class="envelope">
-🌙
+<div class="letter" onclick="openLetter('abraco')">
+<div class="envelope">🤗</div>
+<h3>precisar de um abraço</h3>
+<p>Abra quando quiser um abraço que está longe.</p>
+<span class="click">abrir →</span>
 </div>
 
-<h3>
-abra antes de mimir
-</h3>
-
-<p>
-Uma pequena boa noite do outro lado da distância.
-</p>
-
-<span class="click">
-abrir →
-</span>
-
+<div class="letter" onclick="openLetter('pensando')">
+<div class="envelope">💭</div>
+<h3>estiver pensando demais</h3>
+<p>Para quando sua cabeça não quiser desligar.</p>
+<span class="click">abrir →</span>
 </div>
 
-
-
-<!-- CONQUISTA -->
-
-<div
-class="letter"
-onclick="openLetter('conquista')"
->
-
-<div class="envelope">
-🏆
+<div class="letter" onclick="openLetter('saudadeLu')">
+<div class="envelope">🥺</div>
+<h3>estiver com saudades do Lu</h3>
+<p>Eu sei que você está. Não adianta esconder.</p>
+<span class="click">abrir →</span>
 </div>
 
-<h3>
-tiver uma conquista
-</h3>
-
-<p>
-Para comemorar com você mesmo estando longe.
-</p>
-
-<span class="click">
-abrir →
-</span>
-
+<div class="letter" onclick="openLetter('amor')">
+<div class="envelope">❤️</div>
+<h3>precisar lembrar que eu te amo</h3>
+<p>Essa aqui talvez seja importante.</p>
+<span class="click">abrir →</span>
 </div>
 
-
-
-<!-- CASA -->
-
-<div
-class="letter"
-onclick="openLetter('casa')"
->
-
-<div class="envelope">
-🏠
+<div class="letter" onclick="openLetter('distancia')">
+<div class="envelope">🌎</div>
+<h3>a distância parecer grande demais</h3>
+<p>Para lembrar que isso não é para sempre.</p>
+<span class="click">abrir →</span>
 </div>
 
-<h3>
-estiver com saudades de casa
-</h3>
-
-<p>
-Para quando a saudade dos seus pais apertar.
-</p>
-
-<span class="click">
-abrir →
-</span>
-
+<div class="letter" onclick="openLetter('feliz')">
+<div class="envelope">🥰</div>
+<h3>estiver feliz</h3>
+<p>Porque eu também quero participar das suas alegrias.</p>
+<span class="click">abrir →</span>
 </div>
 
-
-
-<!-- RAIVA -->
-
-<div
-class="letter"
-onclick="openLetter('raiva')"
->
-
-<div class="envelope">
-😤
+<div class="letter" onclick="openLetter('nos')">
+<div class="envelope">🫶</div>
+<h3>precisar lembrar de nós</h3>
+<p>Para lembrar que ainda tem muita coisa para viver.</p>
+<span class="click">abrir →</span>
 </div>
 
-<h3>
-estiver com raiva
-</h3>
-
-<p>
-Mesmo que a raiva seja de mim KKKKKKK.
-</p>
-
-<span class="click">
-abrir →
-</span>
-
-</div>
-
-
-
-<!-- ABRAÇO -->
-
-<div
-class="letter"
-onclick="openLetter('abraco')"
->
-
-<div class="envelope">
-🤗
-</div>
-
-<h3>
-precisar de um abraço
-</h3>
-
-<p>
-Abra quando quiser um abraço que está longe.
-</p>
-
-<span class="click">
-abrir →
-</span>
-
-</div>
-
-
-
-<!-- PENSANDO -->
-
-<div
-class="letter"
-onclick="openLetter('pensando')"
->
-
-<div class="envelope">
-💭
-</div>
-
-<h3>
-estiver pensando demais
-</h3>
-
-<p>
-Para quando sua cabeça não quiser desligar.
-</p>
-
-<span class="click">
-abrir →
-</span>
-
-</div>
-
-
-
-<!-- SAUDADE DO LU -->
-
-<div
-class="letter"
-onclick="openLetter('saudadeLu')"
->
-
-<div class="envelope">
-🥺
-</div>
-
-<h3>
-estiver com saudades do Lu
-</h3>
-
-<p>
-Eu sei que você está. Não adianta esconder.
-</p>
-
-<span class="click">
-abrir →
-</span>
-
-</div>
-
-
-
-<!-- AMOR -->
-
-<div
-class="letter"
-onclick="openLetter('amor')"
->
-
-<div class="envelope">
-❤️
-</div>
-
-<h3>
-precisar lembrar que eu te amo
-</h3>
-
-<p>
-Essa aqui talvez seja importante.
-</p>
-
-<span class="click">
-abrir →
-</span>
-
-</div>
-
-
-
-<!-- DISTÂNCIA -->
-
-<div
-class="letter"
-onclick="openLetter('distancia')"
->
-
-<div class="envelope">
-🌎
-</div>
-
-<h3>
-a distância parecer grande demais
-</h3>
-
-<p>
-Para lembrar que isso não é para sempre.
-</p>
-
-<span class="click">
-abrir →
-</span>
-
-</div>
-
-
-
-<!-- FELIZ -->
-
-<div
-class="letter"
-onclick="openLetter('feliz')"
->
-
-<div class="envelope">
-🥰
-</div>
-
-<h3>
-estiver feliz
-</h3>
-
-<p>
-Porque eu também quero participar das suas alegrias.
-</p>
-
-<span class="click">
-abrir →
-</span>
-
-</div>
-
-
-
-<!-- NÓS -->
-
-<div
-class="letter"
-onclick="openLetter('nos')"
->
-
-<div class="envelope">
-🫶
-</div>
-
-<h3>
-precisar lembrar de nós
-</h3>
-
-<p>
-Para lembrar que ainda tem muita coisa para viver.
-</p>
-
-<span class="click">
-abrir →
-</span>
-
-</div>
-
-
-
-<!-- PRECISAR DE MIM -->
-
-<div
-class="letter"
-onclick="openLetter('mim')"
->
-
-<div class="envelope">
-💗
-</div>
-
-<h3>
-precisar de mim
-</h3>
-
-<p>
-Pode me chamar. Sério.
-</p>
-
-<span class="click">
-abrir →
-</span>
-
-</div>
-
-
+<div class="letter" onclick="openLetter('mim')">
+<div class="envelope">💗</div>
+<h3>precisar de mim</h3>
+<p>Pode me chamar. Sério.</p>
+<span class="click">abrir →</span>
 </div>
 
 </div>
-
+</div>
 </section>
 
 
-
-<!-- =====================================================
+<!-- =========================
      MODAL
-===================================================== -->
+========================= -->
 
-<div
-class="modal"
-id="modal"
->
+<div class="modal" id="modal">
 
 <div class="modal-box">
 
+<button class="close" onclick="closeLetter()">×</button>
 
-<button
-class="close"
-onclick="closeLetter()"
->
-×
-</button>
+<div class="modal-icon" id="modalIcon">💌</div>
 
+<div class="modal-title" id="modalTitle"></div>
 
-<div
-class="modal-icon"
-id="modalIcon"
->
-💌
-</div>
-
-
-<div
-class="modal-title"
-id="modalTitle"
->
-</div>
-
-
-<div
-class="message"
-id="modalMessage"
->
-</div>
-
-
-
-<!-- =====================================================
-     PLAYER
-===================================================== -->
+<div class="message" id="modalMessage"></div>
 
 <div class="music">
 
@@ -1705,118 +856,104 @@ id="modalMessage"
 essa música é para você
 </div>
 
-
-<div
-class="music-name"
-id="modalMusic"
->
-</div>
-
+<div class="music-name" id="modalMusic"></div>
 
 <audio
-id="audioPlayer"
-controls
-preload="metadata"
+    id="audioPlayer"
+    controls
+    preload="metadata"
 >
+Seu navegador não suporta áudio.
 </audio>
 
-
 <button
-class="music-button"
-id="musicButton"
-onclick="toggleMusic()"
+    class="music-button"
+    id="musicButton"
+    onclick="toggleMusic()"
 >
 ▶️ Tocar música
 </button>
 
 </div>
 
-
+</div>
 </div>
 
-</div>
 
-
-
-<!-- =====================================================
+<!-- =========================
      FINAL
-===================================================== -->
+========================= -->
 
 <section class="final-section">
 
 <div class="container final-box">
 
-
 <div class="heart">
 ❤️
 </div>
 
-
 <h2>
 Até mais tarde, Jambinho.
 </h2>
-
 
 <p>
 Mesmo que o Ceará e SSA pareçam longe,
 tem um pedacinho meu aí com você.
 </p>
 
-
 <div class="signature">
 — seu Lu
 </div>
-
 
 </div>
 
 </section>
 
-
 </main>
-
 
 
 <script>
 
 /* =====================================================
-   CAMINHOS DAS MÚSICAS
+   MÚSICAS
+
+   OS MP3 ESTÃO NO SEU REPOSITÓRIO DO GITHUB.
+
+   Usamos o RAW do GitHub para o navegador
+   conseguir tocar os arquivos diretamente.
 ===================================================== */
 
-/*
-   IMPORTANTE:
-
-   Os arquivos MP3 devem estar na MESMA pasta
-   deste index.html.
-
-   Exemplo:
-
-   index.html
-   queen.mp3
-   bestpart.mp3
-   pov.mp3
-   etc.
-*/
+const BASE_MUSICAS =
+    "https://raw.githubusercontent.com/luan8172728-lgtm/jambinho/main/";
 
 const musicas = {
 
-    queen: "./queen.mp3",
+    queen:
+        BASE_MUSICAS + "queen.mp3",
 
-    bestpart: "./bestpart.mp3",
+    bestpart:
+        BASE_MUSICAS + "bestpart.mp3",
 
-    pov: "./pov.mp3",
+    pov:
+        BASE_MUSICAS + "pov.mp3",
 
-    wecantbefriends: "./wecantbefriends.mp3",
+    wecantbefriends:
+        BASE_MUSICAS + "wecantbefriends.mp3",
 
-    springday: "./springday.mp3",
+    springday:
+        BASE_MUSICAS + "springday.mp3",
 
-    loveyourself: "./loveyourself.mp3",
+    loveyourself:
+        BASE_MUSICAS + "loveyourself.mp3",
 
-    magicshop: "./magicshop.mp3",
+    magicshop:
+        BASE_MUSICAS + "magicshop.mp3",
 
-    dynamite: "./dynamite.mp3",
+    dynamite:
+        BASE_MUSICAS + "dynamite.mp3",
 
-    moonlight: "./moonlight.mp3"
+    moonlight:
+        BASE_MUSICAS + "moonlight.mp3"
 
 };
 
@@ -1827,98 +964,94 @@ const musicas = {
 
 const letters = {
 
-    saudade: {
+saudade: {
 
-        icon: "💌",
+    icon: "💌",
 
-        title:
-            "quando estiver com saudades",
+    title:
+        "quando estiver com saudades",
 
-        message:
+    message:
 `Eu queria poder simplesmente aparecer aí agora. Bater na sua porta, te abraçar forte e ficar alguns minutos te enchendo de beijos e te chamando de jambinho, bubu, milenete, fro, mo, momo, labubu.
 
 Não da para fazer isso, então espero que essa mensagem seja um pedacinho meu chegando em você.
 
 Quando a saudade bater, lembra que daqui do umbral tem alguém pensando em você e contando os dias para o nosso reencontro.`,
 
-        music:
-            "Queen & Poet — John Michael Howell",
+    music:
+        "Queen & Poet — John Michael Howell",
 
-        audio:
-            musicas.queen
+    audio:
+        musicas.queen
+},
 
-    },
 
+sozinha: {
 
-    sozinha: {
+    icon: "🫂",
 
-        icon: "🫂",
+    title:
+        "quando estiver se sentindo sozinha",
 
-        title:
-            "quando estiver se sentindo sozinha",
-
-        message:
+    message:
 `Eu sei que tem dias que ai parece um castelo enorme e solitario, e que voce parece perdida no meio dessa capital desgraçada. Mas você não está sozinha de verdade. Tem um ser humaninho aqui que se importa muito com você, que quer saber como foi seu dia, que fica feliz quando você está feliz, que queria estar aí para te fazer companhia e diminuir um pouco o peso de tudo. Se eu pudesse, deitaria com você e encheria seu ouvido de doçuras, minha formiguinha. Então, enquanto eu não posso estar ai, fica o lembrete: eu sempre vou ter você para voltar ❤️`,
 
-        music:
-            "Best Part — Daniel Caesar & H.E.R.",
+    music:
+        "Best Part — Daniel Caesar & H.E.R.",
 
-        audio:
-            musicas.bestpart
+    audio:
+        musicas.bestpart
+},
 
-    },
 
+triste: {
 
-    triste: {
+    icon: "🌧️",
 
-        icon: "🌧️",
+    title:
+        "quando estiver triste",
 
-        title:
-            "quando estiver triste",
-
-        message:
+    message:
 `Oi meu amor. Talvez quando você abrir isso eu não saiba exatamente o que está acontecendo, mas sei que você não precisa ser forte o tempo todo. Pode chorar, pode desabafar comigo, pode me ligar e ficar quietinha se quiser. Lembre que não precisamos resolver nossa vida toda em um dia. As vezes. tudo que podemos fazer é respirar, tomar uma agua, tomar um banho e esperar o coração ficar um pouquinho mais leve. Se nada disso funcionar, fecha isso aqui e imagina eu te dando um abraço muito demorado que você não conseguiria escapar.`,
 
-        music:
-            "pov — Ariana Grande",
+    music:
+        "pov — Ariana Grande",
 
-        audio:
-            musicas.pov
+    audio:
+        musicas.pov
+},
 
-    },
 
+desistir: {
 
-    desistir: {
+    icon: "🌱",
 
-        icon: "🌱",
+    title:
+        "quando quiser desistir",
 
-        title:
-            "quando quiser desistir",
-
-        message:
+    message:
 `Eu sei que você está longe de casa por um motivo. Sei que estudar aí é muito dificil e que existem dias que você pensa “por que eu fui inventar isso?”. Mas olhe onde meu jambinho já chegou. Minha Milenete, você teve coragem de sair das asas dos seus pais para construir o seu futuro, isso é GIGANTEEEE.
 
 Não esqueça nunca de ter orgulha de si mesma. Eu tenho e sempre vou ter.
 
 Vá no seu ritmo, saiba que seu lu tá aqui pra sempre te lembrar de nunca desistir.`,
 
-        music:
-            "Magic Shop — BTS",
+    music:
+        "Magic Shop — BTS",
 
-        audio:
-            musicas.magicshop
+    audio:
+        musicas.magicshop
+},
 
-    },
 
+dormir: {
 
-    dormir: {
+    icon: "🌙",
 
-        icon: "🌙",
+    title:
+        "abra antes de mimir",
 
-        title:
-            "abra antes de mimir",
-
-        message:
+    message:
 `Provavelmente você está ai deitada, mexendo no celular, enquanto eu estou aqui longe e ocupado. Queria poder dar boa noite olhando no fundo dos seus olhos, te abraçar e ouvir você falando sobre o seu dia.
 
 Mas, vou deixar isso aqui.
@@ -1927,23 +1060,22 @@ Dorme bem Jambinho, bjos, te amo e até mais tarde.
 
 Mesmo que a gente esteja em lugares diferentes, quando você olhar novamente para o seu celular, eu vou estar olhando para você por ele.`,
 
-        music:
-            "Moonlight — Ariana Grande",
+    music:
+        "Moonlight — Ariana Grande",
 
-        audio:
-            musicas.moonlight
+    audio:
+        musicas.moonlight
+},
 
-    },
 
+conquista: {
 
-    conquista: {
+    icon: "🏆",
 
-        icon: "🏆",
+    title:
+        "abra quando tiver uma conquista",
 
-        title:
-            "abra quando tiver uma conquista",
-
-        message:
+    message:
 `EU SABIA QUE VOCÊ IA CONSEGUIR MILENEEEEEEETEEEEE.
 
 Eu espero muito que você esteja orgulhosa de si mesma, porque eu estou aqui vibrando e gritando por algo que nem é comigo meu amor.
@@ -1952,69 +1084,66 @@ Suas conquistas me deixam muito feliz bubu.
 
 Comemora muito, você merece, e quando for falar comigo me conta a historia inteira pra gente vibrar juntos.`,
 
-        music:
-            "Dynamite — BTS",
+    music:
+        "Dynamite — BTS",
 
-        audio:
-            musicas.dynamite
+    audio:
+        musicas.dynamite
+},
 
-    },
 
+casa: {
 
-    casa: {
+    icon: "🏠",
 
-        icon: "🏠",
+    title:
+        "quando estiver com saudades de casa",
 
-        title:
-            "quando estiver com saudades de casa",
-
-        message:
+    message:
 `Eu sei que não sou sua casa, sei que estar sem seus pais doi muito e nada ai consegue ocupar o espaço deles.
 
 Espero que você saiba que construiu em mim um lar onde você é muito amada.
 
 E nesse lar tem um lu esperando a mih dele, pronto pra te abraçar e ouvir todas as historias que ela tem pra contar, prontinho para matar a saudade.`,
 
-        music:
-            "Spring Day — BTS",
+    music:
+        "Spring Day — BTS",
 
-        audio:
-            musicas.springday
+    audio:
+        musicas.springday
+},
 
-    },
 
+raiva: {
 
-    raiva: {
+    icon: "😤",
 
-        icon: "😤",
+    title:
+        "quando estiver com raiva (mesmo que seja de mim)",
 
-        title:
-            "quando estiver com raiva (mesmo que seja de mim)",
-
-        message:
+    message:
 `Antes de qualquer coisa respira fundo Jambinho, não faça besteira, não xingue ninguem, vai beber água e tomar um banho, me manda mensagem e vamos conversar.
 
 Fique calminha para não cometer nenhum crime KKKKKKKKKKK.
 
 Tô aqui pra escutar tudo bubu ❤️`,
 
-        music:
-            "we can't be friends — Ariana Grande",
+    music:
+        "we can't be friends — Ariana Grande",
 
-        audio:
-            musicas.wecantbefriends
+    audio:
+        musicas.wecantbefriends
+},
 
-    },
 
+abraco: {
 
-    abraco: {
+    icon: "🤗",
 
-        icon: "🤗",
+    title:
+        "abra quando precisar de um abraço",
 
-        title:
-            "abra quando precisar de um abraço",
-
-        message:
+    message:
 `não tem muito o que escrever né, infelizmente.
 
 Então, imagine:
@@ -2025,23 +1154,22 @@ Eu abraço você muito forte sem pressa nenhuma.
 
 Pronto, considere-se abraça Jambinho. ❤️`,
 
-        music:
-            "Love Yourself — Justin Bieber",
+    music:
+        "Serendipity — BTS",
 
-        audio:
-            musicas.loveyourself
+    audio:
+        musicas.loveyourself
+},
 
-    },
 
+pensando: {
 
-    pensando: {
+    icon: "💭",
 
-        icon: "💭",
+    title:
+        "quando estiver pensando demais",
 
-        title:
-            "quando estiver pensando demais",
-
-        message:
+    message:
 `Ei, minha formiguinha.
 
 Para de pensar tanto.
@@ -2068,23 +1196,22 @@ E tem alguém que te ama muito pensando em você enquanto você lê isso.
 
 Não precisa resolver o amanhã hoje.`,
 
-        music:
-            "pov — Ariana Grande",
+    music:
+        "pov — Ariana Grande",
 
-        audio:
-            musicas.pov
+    audio:
+        musicas.pov
+},
 
-    },
 
+saudadeLu: {
 
-    saudadeLu: {
+    icon: "🥺",
 
-        icon: "🥺",
+    title:
+        "quando estiver com saudades do Lu",
 
-        title:
-            "quando estiver com saudades do Lu",
-
-        message:
+    message:
 `KKKKKKKKKKKKKKKKKK.
 
 Eu sei.
@@ -2109,23 +1236,22 @@ eu também queria você aqui.
 
 Muito. ❤️`,
 
-        music:
-            "Best Part — Daniel Caesar & H.E.R.",
+    music:
+        "Best Part — Daniel Caesar & H.E.R.",
 
-        audio:
-            musicas.bestpart
+    audio:
+        musicas.bestpart
+},
 
-    },
 
+amor: {
 
-    amor: {
+    icon: "❤️",
 
-        icon: "❤️",
+    title:
+        "quando precisar lembrar que eu te amo",
 
-        title:
-            "quando precisar lembrar que eu te amo",
-
-        message:
+    message:
 `Sim.
 
 Eu te amo.
@@ -2144,23 +1270,22 @@ eu te amo, Jambinho.
 
 Muito. ❤️`,
 
-        music:
-            "pov — Ariana Grande",
+    music:
+        "pov — Ariana Grande",
 
-        audio:
-            musicas.pov
+    audio:
+        musicas.pov
+},
 
-    },
 
+distancia: {
 
-    distancia: {
+    icon: "🌎",
 
-        icon: "🌎",
+    title:
+        "quando a distância parecer grande demais",
 
-        title:
-            "quando a distância parecer grande demais",
-
-        message:
+    message:
 `Eu sei.
 
 Hoje o Ceará está longe de SSA.
@@ -2187,23 +1312,22 @@ não é para sempre.
 
 É só até a próxima vez que eu puder te abraçar.`,
 
-        music:
-            "Spring Day — BTS",
+    music:
+        "Spring Day — BTS",
 
-        audio:
-            musicas.springday
+    audio:
+        musicas.springday
+},
 
-    },
 
+feliz: {
 
-    feliz: {
+    icon: "🥰",
 
-        icon: "🥰",
+    title:
+        "quando estiver feliz",
 
-        title:
-            "quando estiver feliz",
-
-        message:
+    message:
 `Se você abriu isso estando feliz, eu já estou feliz também.
 
 Eu não quero estar aqui só nos seus dias ruins.
@@ -2230,23 +1354,22 @@ E depois me conta tudo.
 
 Eu quero conhecer todas as versões da minha Milenete. ❤️`,
 
-        music:
-            "Dynamite — BTS",
+    music:
+        "Dynamite — BTS",
 
-        audio:
-            musicas.dynamite
+    audio:
+        musicas.dynamite
+},
 
-    },
 
+nos: {
 
-    nos: {
+    icon: "🫶",
 
-        icon: "🫶",
+    title:
+        "quando precisar lembrar de nós",
 
-        title:
-            "quando precisar lembrar de nós",
-
-        message:
+    message:
 `Talvez um dia você esteja aí e pense em tudo que aconteceu para a gente chegar até aqui.
 
 Todas as conversas.
@@ -2289,23 +1412,22 @@ Mais nós.
 
 Ainda tem muita coisa para a gente viver.`,
 
-        music:
-            "Best Part — Daniel Caesar & H.E.R.",
+    music:
+        "Best Part — Daniel Caesar & H.E.R.",
 
-        audio:
-            musicas.bestpart
+    audio:
+        musicas.bestpart
+},
 
-    },
 
+mim: {
 
-    mim: {
+    icon: "💗",
 
-        icon: "💗",
+    title:
+        "quando precisar de mim",
 
-        title:
-            "quando precisar de mim",
-
-        message:
+    message:
 `Pode me chamar.
 
 Sério.
@@ -2344,13 +1466,12 @@ Eu tô aqui.
 
 ❤️`,
 
-        music:
-            "pov — Ariana Grande",
+    music:
+        "pov — Ariana Grande",
 
-        audio:
-            musicas.pov
-
-    }
+    audio:
+        musicas.pov
+}
 
 };
 
@@ -2378,153 +1499,87 @@ function openLetter(id) {
     const letter = letters[id];
 
     if (!letter) {
-
-        console.error(
-            "Carta não encontrada:",
-            id
-        );
-
         return;
     }
 
-
-    /* Conteúdo */
-
     document
         .getElementById("modalIcon")
-        .textContent =
-        letter.icon;
-
+        .textContent = letter.icon;
 
     document
         .getElementById("modalTitle")
-        .textContent =
-        letter.title;
-
+        .textContent = letter.title;
 
     document
         .getElementById("modalMessage")
-        .textContent =
-        letter.message;
-
+        .textContent = letter.message;
 
     document
         .getElementById("modalMusic")
-        .textContent =
-        letter.music;
+        .textContent = letter.music;
 
-
-    /* =================================================
-       PARA A MÚSICA ANTERIOR
-    ================================================= */
+    /* PARA A MÚSICA ANTERIOR */
 
     audioPlayer.pause();
 
     audioPlayer.currentTime = 0;
 
-    audioPlayer.removeAttribute("src");
+    /* CARREGA A NOVA MÚSICA */
+
+    audioPlayer.src = letter.audio;
 
     audioPlayer.load();
 
+    musicButton.textContent =
+        "▶️ Tocar música";
 
-    /* =================================================
-       CARREGA A NOVA MÚSICA
-    ================================================= */
+    /* ABRE MODAL */
 
-    if (letter.audio) {
-
-        audioPlayer.src =
-            letter.audio;
-
-        audioPlayer.load();
-
-        musicButton.disabled =
-            false;
-
-        musicButton.textContent =
-            "▶️ Tocar música";
-
-    }
-
-    else {
-
-        musicButton.disabled =
-            true;
-
-        musicButton.textContent =
-            "🎵 Música indisponível";
-
-    }
-
-
-    /* Abre modal */
-
-    modal.classList.add(
-        "active"
-    );
-
+    modal.classList.add("active");
 
     document.body.style.overflow =
         "hidden";
 
-
     createHearts();
-
 }
 
 
 /* =====================================================
-   TOCAR / PAUSAR
+   TOCAR / PAUSAR MÚSICA
 ===================================================== */
 
-async function toggleMusic() {
-
-    if (!audioPlayer.src) {
-
-        alert(
-            "Essa carta não possui uma música configurada. ❤️"
-        );
-
-        return;
-    }
-
+function toggleMusic() {
 
     if (audioPlayer.paused) {
 
-        try {
+        audioPlayer
+            .play()
+            .then(() => {
 
-            await audioPlayer.play();
+                musicButton.textContent =
+                    "⏸️ Pausar música";
 
-            musicButton.textContent =
-                "⏸️ Pausar música";
+            })
+            .catch((error) => {
 
-        }
+                console.error(
+                    "Erro ao tocar áudio:",
+                    error
+                );
 
-        catch (error) {
+                alert(
+                    "Não foi possível tocar essa música. ❤️"
+                );
 
-            console.error(
-                "Erro ao tocar música:",
-                error
-            );
+            });
 
-            alert(
-                "Não consegui tocar essa música. " +
-                "Confira se o arquivo .mp3 existe no GitHub. ❤️"
-            );
-
-        }
-
-    }
-
-    else {
+    } else {
 
         audioPlayer.pause();
 
         musicButton.textContent =
             "▶️ Tocar música";
-
     }
-
 }
 
 
@@ -2542,14 +1597,11 @@ audioPlayer.addEventListener(
     }
 );
 
-
 audioPlayer.addEventListener(
     "pause",
     function() {
 
-        if (
-            !audioPlayer.ended
-        ) {
+        if (!audioPlayer.ended) {
 
             musicButton.textContent =
                 "▶️ Tocar música";
@@ -2558,7 +1610,6 @@ audioPlayer.addEventListener(
 
     }
 );
-
 
 audioPlayer.addEventListener(
     "ended",
@@ -2572,7 +1623,7 @@ audioPlayer.addEventListener(
 
 
 /* =====================================================
-   ERRO AO CARREGAR MÚSICA
+   ERRO DE ÁUDIO
 ===================================================== */
 
 audioPlayer.addEventListener(
@@ -2580,12 +1631,9 @@ audioPlayer.addEventListener(
     function() {
 
         console.error(
-            "Não foi possível carregar a música:",
+            "Não foi possível carregar:",
             audioPlayer.src
         );
-
-        musicButton.textContent =
-            "❌ Música não encontrada";
 
     }
 );
@@ -2601,25 +1649,13 @@ function closeLetter() {
 
     audioPlayer.currentTime = 0;
 
-    audioPlayer.removeAttribute(
-        "src"
-    );
+    audioPlayer.removeAttribute("src");
 
     audioPlayer.load();
 
+    modal.classList.remove("active");
 
-    modal.classList.remove(
-        "active"
-    );
-
-
-    document.body.style.overflow =
-        "";
-
-
-    musicButton.textContent =
-        "▶️ Tocar música";
-
+    document.body.style.overflow = "";
 }
 
 
@@ -2631,9 +1667,7 @@ modal.addEventListener(
     "click",
     function(event) {
 
-        if (
-            event.target === modal
-        ) {
+        if (event.target === modal) {
 
             closeLetter();
 
@@ -2651,9 +1685,7 @@ document.addEventListener(
     "keydown",
     function(event) {
 
-        if (
-            event.key === "Escape"
-        ) {
+        if (event.key === "Escape") {
 
             closeLetter();
 
@@ -2670,32 +1702,21 @@ document.addEventListener(
 function createHearts() {
 
     const hearts = [
-
         "❤️",
         "💕",
         "💗",
         "💖",
         "💓",
         "💞"
-
     ];
 
-
-    for (
-        let i = 0;
-        i < 8;
-        i++
-    ) {
+    for (let i = 0; i < 8; i++) {
 
         const heart =
-            document.createElement(
-                "div"
-            );
-
+            document.createElement("div");
 
         heart.className =
             "floating-heart";
-
 
         heart.textContent =
             hearts[
@@ -2705,27 +1726,18 @@ function createHearts() {
                 )
             ];
 
-
         heart.style.left =
-            Math.random() *
-            100 +
-            "vw";
-
+            Math.random() * 100 + "vw";
 
         heart.style.bottom =
             "-20px";
 
-
         heart.style.animationDelay =
-            Math.random() *
-            .5 +
-            "s";
-
+            Math.random() * .5 + "s";
 
         document.body.appendChild(
             heart
         );
-
 
         setTimeout(
             function() {
@@ -2735,14 +1747,10 @@ function createHearts() {
             },
             2200
         );
-
     }
-
 }
 
 </script>
 
 </body>
-
 </html>
-```
