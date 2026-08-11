@@ -33,10 +33,6 @@ body {
     overflow-x: hidden;
 }
 
-/* =========================
-   ESTRELAS
-========================= */
-
 .stars,
 .stars2,
 .stars3 {
@@ -87,10 +83,6 @@ body {
     to { opacity: .9; }
 }
 
-/* =========================
-   LUA
-========================= */
-
 .moon {
     position: fixed;
     width: 110px;
@@ -119,20 +111,12 @@ body {
     left: 25px;
 }
 
-/* =========================
-   CONTAINER
-========================= */
-
 .container {
     position: relative;
     z-index: 2;
     width: min(1100px, 92%);
     margin: auto;
 }
-
-/* =========================
-   HERO
-========================= */
 
 .hero {
     min-height: 100vh;
@@ -192,10 +176,6 @@ body {
         transform: translateY(8px);
     }
 }
-
-/* =========================
-   CARTAS
-========================= */
 
 .letters-section {
     padding: 60px 0 120px;
@@ -291,10 +271,6 @@ body {
     color: #9d859b;
 }
 
-/* =========================
-   MODAL
-========================= */
-
 .modal {
     position: fixed;
     inset: 0;
@@ -355,10 +331,6 @@ body {
     transform: scale(1) translateY(0);
 }
 
-/* =========================
-   FECHAR
-========================= */
-
 .close {
     position: absolute;
     top: 18px;
@@ -383,10 +355,6 @@ body {
     background: rgba(255,120,170,.2);
 }
 
-/* =========================
-   CONTEUDO
-========================= */
-
 .modal-icon {
     font-size: 45px;
     margin-bottom: 15px;
@@ -406,10 +374,6 @@ body {
     color: #f3e8f0;
     white-space: pre-line;
 }
-
-/* =========================
-   MUSICA
-========================= */
 
 .music {
     margin-top: 35px;
@@ -470,10 +434,6 @@ body {
     background: rgba(255,120,170,.2);
     transform: translateY(-2px);
 }
-
-/* =========================
-   FINAL
-========================= */
 
 .final-section {
     min-height: 80vh;
@@ -538,10 +498,6 @@ body {
     color: #ffafd0;
 }
 
-/* =========================
-   CORACOES
-========================= */
-
 .floating-heart {
     position: fixed;
 
@@ -574,10 +530,6 @@ body {
         opacity: 0;
     }
 }
-
-/* =========================
-   RESPONSIVO
-========================= */
 
 @media (max-width: 850px) {
 
@@ -663,10 +615,6 @@ body {
 
 <main>
 
-<!-- =========================
-     ABERTURA
-========================= -->
-
 <section class="hero">
 
 <div class="container hero-content">
@@ -693,10 +641,6 @@ Então deixei alguns pedacinhos meus espalhados por aqui.
 
 </section>
 
-
-<!-- =========================
-     CARTINHAS
-========================= -->
 
 <section class="letters-section">
 
@@ -834,10 +778,6 @@ Escolha uma. Eu espero que ela te faça companhia. ❤️
 </section>
 
 
-<!-- =========================
-     MODAL
-========================= -->
-
 <div class="modal" id="modal">
 
 <div class="modal-box">
@@ -880,10 +820,6 @@ Seu navegador não suporta áudio.
 </div>
 
 
-<!-- =========================
-     FINAL
-========================= -->
-
 <section class="final-section">
 
 <div class="container final-box">
@@ -917,43 +853,28 @@ tem um pedacinho meu aí com você.
 /* =====================================================
    MÚSICAS
 
-   OS MP3 ESTÃO NO SEU REPOSITÓRIO DO GITHUB.
-
-   Usamos o RAW do GitHub para o navegador
-   conseguir tocar os arquivos diretamente.
+   Os arquivos estão na mesma pasta do index.html.
 ===================================================== */
-
-const BASE_MUSICAS =
-    "https://raw.githubusercontent.com/luan8172728-lgtm/jambinho/main/";
 
 const musicas = {
 
-    queen:
-        BASE_MUSICAS + "queen.mp3",
+    queen: "queen.mp3",
 
-    bestpart:
-        BASE_MUSICAS + "bestpart.mp3",
+    bestpart: "bestpart.mp3",
 
-    pov:
-        BASE_MUSICAS + "pov.mp3",
+    pov: "pov.mp3",
 
-    wecantbefriends:
-        BASE_MUSICAS + "wecantbefriends.mp3",
+    wecantbefriends: "wecantbefriends.mp3",
 
-    springday:
-        BASE_MUSICAS + "springday.mp3",
+    springday: "springday.mp3",
 
-    loveyourself:
-        BASE_MUSICAS + "loveyourself.mp3",
+    serendipity: "serendipity.mp3",
 
-    magicshop:
-        BASE_MUSICAS + "magicshop.mp3",
+    magicshop: "magicshop.mp3",
 
-    dynamite:
-        BASE_MUSICAS + "dynamite.mp3",
+    dynamite: "dynamite.mp3",
 
-    moonlight:
-        BASE_MUSICAS + "moonlight.mp3"
+    moonlight: "moonlight.mp3"
 
 };
 
@@ -1158,7 +1079,7 @@ Pronto, considere-se abraça Jambinho. ❤️`,
         "Serendipity — BTS",
 
     audio:
-        musicas.loveyourself
+        musicas.serendipity
 },
 
 
@@ -1518,34 +1439,71 @@ function openLetter(id) {
         .getElementById("modalMusic")
         .textContent = letter.music;
 
+
     /* PARA A MÚSICA ANTERIOR */
 
     audioPlayer.pause();
-
     audioPlayer.currentTime = 0;
+
 
     /* CARREGA A NOVA MÚSICA */
 
     audioPlayer.src = letter.audio;
-
     audioPlayer.load();
+
+
+    /* BOTÃO */
 
     musicButton.textContent =
         "▶️ Tocar música";
 
-    /* ABRE MODAL */
+
+    /* ABRE A CARTA */
 
     modal.classList.add("active");
 
     document.body.style.overflow =
         "hidden";
 
+
+    /* CORAÇÕES */
+
     createHearts();
+
+
+    /* =================================================
+       TENTA TOCAR AUTOMATICAMENTE
+
+       Como essa função é chamada pelo clique
+       na cartinha, o navegador permite a reprodução
+       na maioria dos casos.
+    ================================================= */
+
+    audioPlayer
+        .play()
+        .then(function() {
+
+            musicButton.textContent =
+                "⏸️ Pausar música";
+
+        })
+        .catch(function(error) {
+
+            console.log(
+                "Autoplay bloqueado pelo navegador:",
+                error
+            );
+
+            musicButton.textContent =
+                "▶️ Tocar música";
+
+        });
+
 }
 
 
 /* =====================================================
-   TOCAR / PAUSAR MÚSICA
+   TOCAR / PAUSAR
 ===================================================== */
 
 function toggleMusic() {
@@ -1554,21 +1512,17 @@ function toggleMusic() {
 
         audioPlayer
             .play()
-            .then(() => {
+            .then(function() {
 
                 musicButton.textContent =
                     "⏸️ Pausar música";
 
             })
-            .catch((error) => {
+            .catch(function(error) {
 
                 console.error(
                     "Erro ao tocar áudio:",
                     error
-                );
-
-                alert(
-                    "Não foi possível tocar essa música. ❤️"
                 );
 
             });
@@ -1579,7 +1533,9 @@ function toggleMusic() {
 
         musicButton.textContent =
             "▶️ Tocar música";
+
     }
+
 }
 
 
@@ -1597,6 +1553,7 @@ audioPlayer.addEventListener(
     }
 );
 
+
 audioPlayer.addEventListener(
     "pause",
     function() {
@@ -1610,6 +1567,7 @@ audioPlayer.addEventListener(
 
     }
 );
+
 
 audioPlayer.addEventListener(
     "ended",
@@ -1631,7 +1589,7 @@ audioPlayer.addEventListener(
     function() {
 
         console.error(
-            "Não foi possível carregar:",
+            "Erro ao carregar música:",
             audioPlayer.src
         );
 
@@ -1656,6 +1614,7 @@ function closeLetter() {
     modal.classList.remove("active");
 
     document.body.style.overflow = "";
+
 }
 
 
@@ -1747,7 +1706,9 @@ function createHearts() {
             },
             2200
         );
+
     }
+
 }
 
 </script>
